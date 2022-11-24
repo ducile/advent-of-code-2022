@@ -8,6 +8,6 @@ abstract class Solver(val day: Int) {
         println("Part 2: ${solvePart2(input)}")
     }
 
-    abstract fun solvePart1(input: String): String
-    abstract fun solvePart2(input: String): String
+    abstract fun solvePart1(input: String): Any
+    abstract fun solvePart2(input: String): Any
 }
