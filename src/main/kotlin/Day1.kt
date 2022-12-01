@@ -30,7 +30,7 @@ class Day1 : Solver(1) {
         var tempWeight = 0
 
         for(i in data.indices) {
-            if (i == data.count() -1 ) {
+            if (i == data.count() - 1) {
                 tempWeight += data[i].toInt()
                 weights.add(tempWeight)
             }
@@ -42,10 +42,8 @@ class Day1 : Solver(1) {
                 tempWeight += data[i].toInt()
             }
         }
-
-        val top3MaxWeight = weights.sorted().reversed()
-
-        return (top3MaxWeight[0] + top3MaxWeight[1] + top3MaxWeight[2])
+        
+        return weights.sorted().reversed().take(3).sum()
     }
 }
 
