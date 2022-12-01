@@ -3,7 +3,7 @@ import utils.readInputLines
 
 class Day1 : Solver(1) {
     override fun solvePart1(input: String): Any {
-        val data = input.split("\n")
+        val data = readInputLines(input)
 
         var currentMaxWeight = 0
         var tempWeight = 0
@@ -24,7 +24,7 @@ class Day1 : Solver(1) {
     }
 
     override fun solvePart2(input: String): Any {
-        val data = input.split("\n")
+        val data = readInputLines(input)
 
         val weights = emptyList<Int>().toMutableList()
         var tempWeight = 0
@@ -42,7 +42,7 @@ class Day1 : Solver(1) {
                 tempWeight += data[i].toInt()
             }
         }
-        
+
         return weights.sorted().reversed().take(3).sum()
     }
 }
