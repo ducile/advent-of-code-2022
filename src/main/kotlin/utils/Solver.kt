@@ -10,7 +10,7 @@ abstract class Solver(private val day: Int) {
             println("Part 2: ${solvePart2(input)}")
     }
 
-    fun verify(testData: String, expectedOutcome: Long, part: String) {
+    fun verify(testData: String, expectedOutcome: Any, part: String) {
         if (part == "#1") {
             val result = solvePart1(testData)
 
@@ -30,7 +30,7 @@ abstract class Solver(private val day: Int) {
         }
     }
 
-    fun verifyAndSolve(testData: String, expectedOutcome: Long, part: String) {
+    fun verifyAndSolve(testData: String, expectedOutcome: Any, part: String) {
         verify(testData, expectedOutcome, part)
 
         solve(part)
